@@ -133,7 +133,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(404); res.end(JSON.stringify({ error: 'Not found' }));
 });
 
-server.listen(CONFIG.apiPort, () => console.log(`✅ API on port ${CONFIG.apiPort}`));
+server.listen(process.env.PORT || CONFIG.apiPort, () => console.log(`✅ API running!`));
 
 // ============================================================
 // DISCORD CLIENT
